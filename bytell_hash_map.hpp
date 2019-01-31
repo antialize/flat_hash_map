@@ -105,7 +105,7 @@ struct sherwood_v8_block
         T data[BlockSize];
     };
 
-    static sherwood_v8_block * empty_block()
+    __attribute__((visibility("default"))) static sherwood_v8_block * empty_block()
     {
         static std::array<int8_t, BlockSize> empty_bytes = []
         {
